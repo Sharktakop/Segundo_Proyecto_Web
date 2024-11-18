@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>Detalle Producto</title>
+{% endblock extrahead%}
+
+{% block content %}
+<h1> Detalle </h1>
+<table class= "table">
+     <thead>
+        <tr>
+           <th scope= "col">Id</th>
+           <th scope= "col">Nombre</th>
+           <th scope= "col">Marca</th>
+           <th scope= "col">Stock</th>
+           <th scope= "col">Fecha Vencimiento</th>
+           <th scope= "col">Precio Compra</th>
+           <th scope= "col">Precio Venta</th>
+           <th scope= "col">imagen</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+            <th scope= "row">{{dulce.id}}</th>
+            <td>{{ dulce.nombre }}</td>
+            <td>{{ dulce.marca }}</td>
+            <td>{{ dulce.stock }}</td>
+            <td>{{ dulce.vencimiento }}</td>
+            <td>{{ dulce.precioCompra }}</td>
+            <td>{{ dulce.precioVenta }}</td>
+            <td><img src="{{ dulce.imagen.url }}" style="width: 100px; height: auto;"></td>
+            </tr>
+     </tbody>
+</table>
+{% endblock content%}
